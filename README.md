@@ -15,17 +15,17 @@ To use the 2 together:
   var series = [];
   
   series.push({
-    data: [], // your raw data
-    bars: {
-      order: 0
-    }
+      data: [], // your raw data
+      bars: {
+          order: 0
+      }
   });
   
   series.push({
-    data: [], // your raw data
-    bars: {
-      order: 1
-    }
+      data: [], // your raw data
+      bars: {
+          order: 1
+      }
   });
 ```
 
