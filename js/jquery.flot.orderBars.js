@@ -54,7 +54,7 @@
                     var centerBarShift = calculCenterBarShift();
 
                     // If we haven't already calculated the decallage for this order value, do it.
-                    if(!decallageByOrder[serie.bars.order]) {
+                    if(typeof decallageByOrder[serie.bars.order] === 'undefined') {
                         if (isBarAtLeftOfCenter(position)){
                             decallageByOrder[serie.bars.order] = -1*(sumWidth(orderedBarSeries,position-1,Math.floor(nbOfBarsToOrder / 2)-1)) - centerBarShift;
                         }else{

@@ -21,51 +21,57 @@ var orig_data = getData();
 for(var i = 0; i<orig_data.length; i++) {
     orig_data[i].bars = {
         order: 0
-    }
+    };
+    orig_data[i].stack = true;
 }
 
 orig_data.push({
     data: [[0, 4], [1, 1], [2, 3]],
     bars: {
         order: 1
-    }
+    },
+    stack: true
 });
 
 orig_data.push({
     data: [[0, 7], [1, 2], [2, 3]],
     bars: {
         order: 1
-    }
+    },
+    stack: true
 });
 $.plot($('#stacked-ordered-chart'), orig_data, {
     bars: {
         show: true,
         barWidth: 0.4
-    },
-    series: {
-        stack: true
     }
 });
 
 // Don't want any logs for the working examples
 
 // STACKED CHART
-$.plot($('#stacked-chart'), getData(), {
+var d = getData();
+for(var i = 0; i<d.length; i++) {
+    d[i].stack = true;
+}
+
+$.plot($('#stacked-chart'), d, {
     bars: {
         show: true
-    },
-    series: {
-        stack: true
     }
 });
 
+
+
+
+// ORDERED CHART
 var d = getData();
 for(var i = 0; i<d.length; i++) {
     d[i].bars = {
         order: i
     }
 }
-// ORDERED CHART
+
 $.plot($('#ordered-chart'), d, {
     bars: {
         show: true,
