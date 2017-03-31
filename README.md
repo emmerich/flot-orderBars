@@ -1,6 +1,8 @@
 flot-orderBars
 ==============
 
+This project is no longer actively maintained, but will remain here as a npm/bower-compatable source for the orderBars plugin.
+
 Fork of the Flot OrderBars plugin found here: http://www.benjaminbuffet.com/public/js/jquery.flot.orderBars.js
 
 Installation
